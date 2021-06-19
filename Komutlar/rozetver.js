@@ -45,12 +45,12 @@ return message.inlineReply(`<:calisiyor:798582407393312808> <@${args[1]}> Adlı 
 };
 
 if(args[0] == "mod") {
-db.set(`gold_${args[1]}`, "<:early:855750547143524364>")
+db.set(`mod_${args[1]}`, "<:early:855750547143524364>")
 return message.inlineReply(`<:calisiyor:798582407393312808> <@${args[1]}> Adlı kişiye mod verdim!`)
 };
 
 if(args[0] == "early") {
-db.set(`gold_${args[1]}`, "<:mod:855750428926935050>")
+db.set(`early_${args[1]}`, "<:mod:855750428926935050>")
 return message.inlineReply(`<:calisiyor:798582407393312808> <@${args[1]}> Adlı kişiye early verdim!`)
 };
 
