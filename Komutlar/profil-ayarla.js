@@ -2,10 +2,9 @@ const Discord = require("discord.js")
 
 exports.run = async (client, message, args) => {
 
-  if (!args[0]) {
+  if(!args[0]) {
     const embed = new Discord.MessageEmbed() 
-.setDescription(`<:codesty_cross:844468546930606100> Bir argümant girmen lazım!
-`yaş` **|** `açıklama` **|** `durum` **|** `durum-emoji` **|** `banner` **|** `xbox` **|** `youtube` **|** `github` `) 
+.setDescription("<:codesty_cross:844468546930606100> Bir argümant girmen lazım! \n`yaş` **|** `açıklama` **|** `durum` **|** `durum-emoji` **|** `banner` **|** `xbox` **|** `youtube` **|** `github`") 
 .setColor("RED") 
 } 
 
