@@ -35,12 +35,12 @@ return message.inlineReply('<:calisiyor:798582407393312808> <@${args[1]}> Adlı 
 };
 
 if(args[0] == "dev") {
-db.set(`bug_${args[1]}`, "<:developer:768822320315105322>")
+db.set(`dev_${args[1]}`, "<:developer:768822320315105322>")
 return message.inlineReply('<:calisiyor:798582407393312808> <@${args[1]}> Adlı kişiye developer verdim!')
 };
 
 if(args[0] == "gold") {
-db.set(`bug_${args[1]}`, "<:gold:850626402893955123>")
+db.set(`gold_${args[1]}`, "<:gold:850626402893955123>")
 return message.inlineReply('<:calisiyor:798582407393312808> <@${args[1]}> Adlı kişiye gold verdim!')
 };
 
