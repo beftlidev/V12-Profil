@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-
+const db = require("croxydb") 
 exports.run = async (client, message, args) => {
 
   if(!args[0]) {
