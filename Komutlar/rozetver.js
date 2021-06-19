@@ -54,6 +54,11 @@ db.set(`early_${args[1]}`, "<:mod:855750428926935050>")
 return message.inlineReply(`<:calisiyor:798582407393312808> <@${args[1]}> Adlı kişiye early verdim!`)
 };
 
+if(args[0] == "onaylı") {
+db.set(`onayli_${args[1]}`, "<:verified:799571972727504896>")
+return message.inlineReply(`<:calisiyor:798582407393312808> <@${args[1]}> Adlı kişiye onaylı kullanıcı verdim!`)
+};
+
 } 
 exports.conf = {
 aliases: [] 
