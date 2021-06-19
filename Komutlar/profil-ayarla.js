@@ -6,6 +6,7 @@ exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed() 
 .setDescription("<:codesty_cross:844468546930606100> Bir argümant girmen lazım! \n`yaş` **|** `açıklama` **|** `durum` **|** `durum-emoji` **|** `banner` **|** `xbox` **|** `youtube` **|** `github`") 
 .setColor("RED") 
+return message.channel.send(embed) 
 } 
 
 if(args[0] == "yaş") {
