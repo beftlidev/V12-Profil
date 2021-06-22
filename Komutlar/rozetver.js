@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+const db = require("croxydb") 
 
 exports.run = async (client, message, args) => {
 
@@ -57,6 +58,11 @@ return message.inlineReply(`<:calisiyor:798582407393312808> <@${args[1]}> Adlı 
 if(args[0] == "onaylı") {
 db.set(`onayli_${args[1]}`, "<:verified:799571972727504896>")
 return message.inlineReply(`<:calisiyor:798582407393312808> <@${args[1]}> Adlı kişiye onaylı kullanıcı verdim!`)
+};
+
+if(args[0] == "hediye") {
+db.set(`hediye_${args[1]}`, "<:codesty_gift:844468550491570186>")
+return message.inlineReply(`<:calisiyor:798582407393312808> <@${args[1]}> Adlı kişiye hediyeci verdim!`)
 };
 
 } 
