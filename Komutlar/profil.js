@@ -14,6 +14,7 @@ let banner = db.fetch(`banner_${message.author.id}`)
 let xbox = db.fetch(`xbox_${message.author.id}`) 
 let youtube = db.fetch(`youtube_${message.author.id}`) 
 let github = db.fetch(`github_${message.author.id}`) 
+let twitch = db.fetch(`twitch_${message.author.id}`) 
 
 let coin = db.fetch(`coin_${message.author.id}`) 
 
@@ -27,6 +28,7 @@ let gold = db.fetch(`gold_${message.author.id}`)
 let destekci = db.fetch(`destekci_${message.author.id}`) 
 let bug = db.fetch(`bug_${message.author.id}`) 
 let bug2 = db.fetch(`bug2_${message.author.id}`) 
+let hediye = db.fetch(`hediye_${message.author.id}`) 
 let onayli = db.fetch(`onayli_${message.author.id}`) 
 
 let xboxb = new MessageButton() 
@@ -45,11 +47,16 @@ let githubb = new MessageButton()
 .setURL(`${github || "https://github.com"}`)
 .setStyle("url")
 
+let twitchb = new MessageButton() 
+.setLabel(`Twitch`)
+.setURL(`${twitch || "https://twitch.com"}`)
+.setStyle("url")
+
 const embed1 = new Discord.MessageEmbed() 
 .setTitle("Profil") 
 .addField(`<:member:856408299229151242> İsim`, message.author.username) 
 .addField(`<:member:856408299229151242> Yaş`, `${yas || "Ayarlanmamış"}`) 
-.addField(`<:backpack:856408019289767937> Rozetlerin`, `${owner || ""} ${yetkili || ""} ${mod || ""} ${dev || ""} ${early || ""} ${pre || "<:codesty_member:844468558523924542>"} ${gold || ""} ${destekci || ""} ${bug || ""} ${bug2 || ""} ${onayli || ""}`)
+.addField(`<:backpack:856408019289767937> Rozetlerin`, `${owner || ""} ${yetkili || ""} ${mod || ""} ${dev || ""} ${early || ""} ${pre || "<:codesty_member:844468558523924542>"} ${gold || ""} ${destekci || ""} ${bug || ""} ${bug2 || ""} ${hediye || ""} ${onayli || ""}.`)
 .addField(`<:coin:856798514540445706> Coinlerin`, `${coin || "0"}`) 
 .addField(`<:pusula:856408214315597834> Açıklama`, `${aciklama || "Ben çok güzel bir kelebeğim"}`) 
 .addField(`<:pusula:856408214315597834> Durum`, `${durume || ""} ${durum || "Ben çok güzel bir çiçeğim"}`)
@@ -58,7 +65,7 @@ const embed1 = new Discord.MessageEmbed()
 .setThumbnail(message.author.avatarURL({ dynamic: true, size: 2048 })) 
 message.channel.send({
 embed: embed1, 
-buttons: [xboxb, youtubeb, githubb]
+buttons: [xboxb, youtubeb, githubb, twitchb]
 }) 
 
 } 
