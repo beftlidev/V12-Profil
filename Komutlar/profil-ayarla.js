@@ -4,7 +4,7 @@ exports.run = async (client, message, args) => {
 
   if(!args[0]) {
     const embed = new Discord.MessageEmbed() 
-.setDescription("<:codesty_cross:844468546930606100> Bir argümant girmen lazım! \n`yaş` **|** `açıklama` **|** `durum` **|** `durum-emoji` **|** `banner` **|** `xbox` **|** `youtube` **|** `github`") 
+.setDescription("<:carpi:855750448711467058> Bir argümant girmen lazım! \n`yaş` **|** `açıklama` **|** `durum` **|** `durum-emoji` **|** `banner` **|** `xbox` **|** `youtube` **|** `github` **|** `twitch` ") 
 .setColor("RED") 
 return message.channel.send(embed) 
 } 
@@ -47,6 +47,11 @@ return message.inlineReply('<:calisiyor:798582407393312808> YouTube ayarlandı!'
 if(args[0] == "github") {
 db.set(`github_${message.author.id}`, args[1])
 return message.inlineReply('<:calisiyor:798582407393312808> Github ayarlandı!')
+};
+
+if(args[0] == "twitch") {
+db.set(`twitch_${message.author.id}`, args[1])
+return message.inlineReply('<:calisiyor:798582407393312808> Twitch ayarlandı!')
 };
 
 } 
